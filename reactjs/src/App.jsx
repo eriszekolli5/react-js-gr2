@@ -3,20 +3,20 @@ import StringProp from './components/StringProp';
 import NumberState from './components/NumberState';
 import StringState from './components/StringState';
 import BooleanState from './components/BooleanState';
-import inputState from './components/inputState';
-import inputState1 from './components/inputState1';
+import InputState from './components/InputState';
+import HomeWork from './components/HomeWork';
 
 function App() {
   const firstName ="eris";
   const lastName ="zekolli";
   return (
     <>
-     <StringProp firstName={firstName} lastName={lastName} />
+    <StringProp firstName={firstName} lastName={lastName} />
     <NumberState />
     <StringState />
-     <BooleanState />
-     <inputState />
-     <inputState1 />
+    <BooleanState />
+    <InputState />
+    <HomeWork />
     </>
   )
 }
