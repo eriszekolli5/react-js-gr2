@@ -5,6 +5,8 @@ import StringState from './components/StringState';
 import BooleanState from './components/BooleanState';
 import InputState from './components/InputState';
 import HomeWork from './components/HomeWork';
+import RenderList from './components/list-array/RenderList';
+import ObjectList from './components/list-array/ObjectList';
 
 function App() {
   const firstName ="eris";
@@ -17,6 +19,10 @@ function App() {
     <BooleanState />
     <InputState />
     <HomeWork />
+    <hr />
+    <RenderList />
+    <ObjectList />
+    <hr />
     </>
   )
 }
