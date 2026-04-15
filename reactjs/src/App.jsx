@@ -7,6 +7,7 @@ import InputState from './components/InputState';
 import HomeWork from './components/HomeWork';
 import RenderList from './components/list-array/RenderList';
 import ObjectList from './components/list-array/ObjectList';
+import ListWork from './components/list-array/ListWork';
 
 function App() {
   const firstName ="eris";
@@ -23,6 +24,8 @@ function App() {
     <RenderList />
     <ObjectList />
     <hr />
+    <hr />
+    <ListWork />
     </>
   )
 }

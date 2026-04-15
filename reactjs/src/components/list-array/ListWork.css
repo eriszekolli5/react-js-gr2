@@ -1,0 +1,29 @@
+.container {
+  padding: 20px;
+}
+
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.student-card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid gray;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-card h3{
+    margin: 0;
+}
+
+.student-card p {
+    margin: 0;
+}
