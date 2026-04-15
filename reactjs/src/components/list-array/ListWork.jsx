@@ -3,63 +3,63 @@ import "./ListWork.css";
 
 
 function ListWork() {
-    const [students, setStudents] = useState([
+    const [products, setProducts] = useState([
         {
             id: 1,
-            firstName: "eris",
-            lastName: "zekolli"
+            firstName: "Product",
+            lastName: "One"
         },
         {
             id: 2,
-            firstName: "eri",
-            lastName: "zekolli"
+            firstName: "Product",
+            lastName: "Two"
         },
         {
             id: 3,
-            firstName: "er",
-            lastName: "zekolli"
+            firstName: "Product",
+            lastName: "Three"
         },
         {
             id: 4,
-            firstName: "eris",
-            lastName: "zekolli"
+            firstName: "Product",
+            lastName: "Four"
         },
         {
             id: 5,
-            firstName: "eri",
-            lastName: "zekolli"
+            firstName: "Product",
+            lastName: "Five"
         },
         {
             id: 6,
-            firstName: "er",
-            lastName: "zekolli"
+            firstName: "Product",
+            lastName: "Six"
         }
     ]);
 
-    console.log(students);
+    console.log(products);
     const [favorites, setFavorites] = useState([]);
-    const toggleFavorite = (student) => {
-        const exists = favorites.find((fav) => fav.id === student.id);
+    const toggleFavorite = (product) => {
+        const exists = favorites.find((fav) => fav.id === product.id);
 
         if (exists) {
-            setFavorites(favorites.filter((fav) => fav.id !== student.id));
+            setFavorites(favorites.filter((fav) => fav.id !== product.id));
         } else {
-            setFavorites([...favorites, student]);
+            setFavorites([...favorites, product]);
         }
     };
 
     return (
         <div className="container">
-            <ul className="student-list">
-                {students.map((student) => (
-                    <li key={student.id} className="student-card">
-                        <p>id: {student.id}</p>
-                        <h3>{student.firstName}</h3>
-                        <h3>{student.lastName}</h3>
+            <ul className="product-list">
+                {products.map((product) => (
+                    <li key={product.id} className="product-card">
+                        <p>Id: {product.id}</p>
+                        <h3>{product.firstName}</h3>
+                        <h3>{product.lastName}</h3>
 
                         <button
                             className="favorite-btn add-btn"
-                            onClick={() => toggleFavorite(student)}
+                            onClick={() => toggleFavorite(product)}
                         >
                             add to favorites
                         </button>
@@ -70,14 +70,14 @@ function ListWork() {
             <div className="favorites">
                 <h1>Favorites</h1>
 
-                <ul className="student-list">
-                    {favorites.map((student) => (
-                        <li key={student.id} className="student-card">
-                            <p>id: {student.id}</p>
-                            <h3>{student.firstName}</h3>
-                            <h3>{student.lastName}</h3>
+                <ul className="product-list">
+                    {favorites.map((product) => (
+                        <li key={product.id} className="product-card">
+                            <p>Id: {product.id}</p>
+                            <h3>{product.firstName}</h3>
+                            <h3>{product.lastName}</h3>
 
-                            <button onClick={() => toggleFavorite(student)}>
+                            <button onClick={() => toggleFavorite(product)}>
                                 remove from favorite
                             </button>
                         </li>

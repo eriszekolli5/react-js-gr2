@@ -1,33 +1,31 @@
 import react from 'react'
-import StringProp from './components/StringProp';
-import NumberState from './components/NumberState';
-import StringState from './components/StringState';
-import BooleanState from './components/BooleanState';
-import InputState from './components/InputState';
-import HomeWork from './components/HomeWork';
-import RenderList from './components/list-array/RenderList';
-import ObjectList from './components/list-array/ObjectList';
-import ListWork from './components/list-array/ListWork';
+
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/about'
+import Products from './pages/products'
+
+import Header from './header/Header';
+import SingleProduct from './pages/SingleProducts'
 
 function App() {
-  const firstName ="eris";
-  const lastName ="zekolli";
   return (
-    <>
-    <StringProp firstName={firstName} lastName={lastName} />
-    <NumberState />
-    <StringState />
-    <BooleanState />
-    <InputState />
-    <HomeWork />
-    <hr />
-    <RenderList />
-    <ObjectList />
-    <hr />
-    <hr />
-    <ListWork />
-    </>
+    <div>
+      <Header />
+
+      <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/products' element={<Products />} />
+      <Route path='/products/:id' element={<SingleProduct />} />
+    </Routes>
+    </div>
+    
+    
+    
   )
 }
 
-export default App;
+export default App

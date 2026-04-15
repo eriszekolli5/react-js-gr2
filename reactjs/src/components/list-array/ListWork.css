@@ -2,13 +2,13 @@
   padding: 20px;
 }
 
-.student-list {
+.product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.student-card {
+.product-card {
   width: 200px;
   padding: 15px;
   border-radius: 12px;
@@ -20,10 +20,10 @@
   gap: 10px;
 }
 
-.student-card h3{
+.product-card h3{
     margin: 0;
 }
 
-.student-card p {
+.product-card p {
     margin: 0;
 }
